@@ -1,0 +1,22 @@
+{
+  "name": "laravel-sanctum-cache/sanctum-cache-token-repository",
+  "description": "Custom Sanctum token repository using cache and database",
+  "type": "library",
+  "autoload": {
+    "psr-4": {
+      "LaravelSanctumCache\\": "src/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "LaravelSanctumCache\\Providers\\CustomSanctumServiceProvider"
+      ]
+    }
+  },
+  "require": {
+    "php": "^8.2",
+    "laravel/sanctum": "^4.0",
+    "laravel/framework": "^11.41"
+  }
+}
