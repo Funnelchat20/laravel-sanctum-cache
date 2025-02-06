@@ -1,5 +1,5 @@
 {
-  "name": "laravel-sanctum-cache/sanctum-cache-token-repository",
+  "name": "funnelchat20/laravel-sanctum-cache",
   "description": "Custom Sanctum token repository using cache and database",
   "type": "library",
   "autoload": {
