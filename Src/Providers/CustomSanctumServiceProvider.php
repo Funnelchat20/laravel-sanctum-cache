@@ -2,9 +2,10 @@
 
 namespace LaravelSanctumCache\Providers;
 
+use Illuminate\Support\ServiceProvider;
 use LaravelSanctumCache\Repositories\CustomTokenRepository;
 
-class CustomSanctumServiceProvider
+class CustomSanctumServiceProvider extends ServiceProvider
 {
     public function register(): void
     {
