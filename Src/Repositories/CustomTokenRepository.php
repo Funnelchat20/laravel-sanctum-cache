@@ -20,7 +20,10 @@ class CustomTokenRepository
     public function create(HasApiTokens $user, string $name, array $abilities = ['*'], $expiresAt = null): NewAccessToken
     {
         $token = $user->createToken($name, $abilities, $expiresAt);
+
         $this->cacheStore->put($token->plainTextToken, $token->accessToken, $expiresAt);
+
+        info('Token created and stored in cache');
 
         return $token;
     }
@@ -30,6 +33,7 @@ class CustomTokenRepository
         $cachedToken = $this->cacheStore->get($token);
 
         if ($cachedToken) {
+            info('Token found in cache');
             return $cachedToken;
         }
 
